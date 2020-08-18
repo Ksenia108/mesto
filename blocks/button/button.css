@@ -1,0 +1,10 @@
+@import url('./__reset/button__reset.css');
+.button {
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
+
+.button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}

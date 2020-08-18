@@ -1,0 +1,9 @@
+.element__caption {
+    margin: 25px 15px 31px 21px;
+    display: grid;
+    grid-template-columns: 170px 21px;
+    grid-template-rows: 1fr;
+    box-sizing: border-box;
+    align-items: stretch;
+    column-gap: 40px;
+}

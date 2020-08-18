@@ -1,0 +1,14 @@
+@import url('./__text/footer__text.css');
+.footer {
+    width: 282px;
+    height: 14px;
+    margin: 0 19px 48px;
+}
+
+@media screen and (min-width: 1280px) {
+    .footer {
+        width: 318px;
+        height: 18px;
+        margin: 0 763px 60px 199px;
+    }
+}
