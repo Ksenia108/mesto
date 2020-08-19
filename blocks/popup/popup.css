@@ -4,7 +4,6 @@
 @import url('./__save/popup__save.css');
 @import url('./__text/popup__text.css');
 @import url('./__title/popup__title.css');
-@import url('./_opened/popup_opened.css');
 .popup {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -16,4 +15,8 @@
     display: none;
     align-items: center;
     justify-content: center;
+}
+
+.popup_opened {
+    display: block;
 }

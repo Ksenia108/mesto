@@ -1,5 +1,6 @@
 .page {
     background: #000000;
+    overflow-x: hidden;
 }
 
 @media screen and (min-width: 320px) {

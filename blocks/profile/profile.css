@@ -4,12 +4,12 @@
 @import url('./__text/profile__text.css');
 @import url('./__title/profile__title.css');
 @import url('./__add/profile__add.css');
+@import url('./__image/profile__image.css');
 .profile {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
-    margin: 42px 19px 0;
+    flex-direction: row;
 }
 
 @media screen and (min-width: 1280px) {
@@ -17,8 +17,5 @@
         width: 882px;
         height: 120px;
         margin: 0 auto 51px;
-        display: flex;
-        justify-content: flex-start;
-        flex-direction: row;
     }
 }

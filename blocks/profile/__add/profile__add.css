@@ -2,7 +2,8 @@
     background-image: url('../../../images/add.svg');
     background-position: center;
     background-repeat: no-repeat;
-    border: 2px solid #FFFFFF !important;
+    background-color: #000000;
+    border: 2px solid #ffffff;
     box-sizing: border-box;
     border-radius: 2px;
     width: 282px;

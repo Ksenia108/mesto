@@ -4,16 +4,19 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
+    display: flex;
     color: #FFFFFF;
     margin: 14px 0 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 1280px) {
     .profile__text {
         font-size: 18px;
-        margin: 16px 0 0 17px;
+        margin: 16px 0 0;
         width: 318px;
-        text-align: start;
+        height: 18px;
     }
 }
