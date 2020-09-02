@@ -7,15 +7,18 @@
 @import url('./__image/profile__image.css');
 .profile {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    margin: 39px auto 0;
 }
 
 @media screen and (min-width: 1280px) {
     .profile {
-        width: 882px;
-        height: 120px;
+        max-width: 882px;
         margin: 0 auto 51px;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
     }
 }

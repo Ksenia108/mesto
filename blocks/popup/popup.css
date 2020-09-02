@@ -13,10 +13,5 @@
     left: 0;
     margin: auto;
     display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.popup_opened {
-    display: block;
+    width: 100vw;
 }

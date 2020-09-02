@@ -3,10 +3,7 @@
 @import url('./__like/element__like.css');
 @import url('./__caption/element__caption.css');
 .element {
-    margin: 0 auto;
     background-color: #ffffff;
     border-radius: 10px 10px;
-    display: grid;
-    width: 282px;
-    height: 361px;
+    overflow: hidden;
 }

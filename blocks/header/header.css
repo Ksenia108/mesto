@@ -1,15 +1,25 @@
 @import url('./__logo/header__logo.css');
-@import url('./__line/header__line.css');
 .header {
-    width: 320px;
-    height: 56px;
-    margin: 28px 0 0;
+    width: 100vw;
+    margin: 28px auto 0;
+    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+}
+
+@media screen and (min-width: 769px) {
+    .header {
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header {
+        width: 80vw;
+    }
 }
 
 @media screen and (min-width: 1280px) {
     .header {
-        width: 882px;
-        height: 74px;
-        margin: 45px 199px 40px;
+        width: 69vw;
+        margin: 45px auto 40px;
     }
 }
