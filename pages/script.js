@@ -1,15 +1,14 @@
-let userName = document.querySelector("username");
-let userJob = document.querySelector("job")
-let nameInput = document.querySelector("name-input");
-let jobInput = document.querySelector("job-input");
-let popup = document.querySelector("popup");
-let popupForm = document.querySelector("popup-form");
+let userName = document.querySelector('[name="username"]');
+let userJob = document.querySelector('[name="job"]')
+let nameInput = document.querySelector('[name="name-input"]');
+let jobInput = document.querySelector('[name="job-input"]');
+let popup = document.querySelector('[name="popup"]');
+let popupForm = document.querySelector('[name="popup-form"]');
 // open popup functionality
-let editButton = document.querySelector("profile-edit");
+let editButton = document.querySelector('[name="profile-edit"]');
 
 // close popup functionality
-let closePopup = document.querySelector("profile-close");
-
+let closePopup = document.querySelector('[name="profile-close"]')
 
 function setInfo() {
     nameInput.value = userName.textContent;
