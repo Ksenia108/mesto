@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 39px auto 0;
+    margin: 39px auto 48px;
 }
 
 @media screen and (min-width: 1280px) {
