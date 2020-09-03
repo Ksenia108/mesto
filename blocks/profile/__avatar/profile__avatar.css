@@ -3,4 +3,5 @@
     height: 128px;
     display: flex;
     justify-content: center;
+    background-size: contain;
 }

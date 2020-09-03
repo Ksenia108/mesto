@@ -7,11 +7,9 @@
     color: #FFFFFF;
     margin: 0;
     max-width: 201px;
-
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
 }
 
 @media screen and (min-width: 1280px) {

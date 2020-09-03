@@ -13,5 +13,6 @@
     left: 0;
     margin: auto;
     display: none;
-    width: 100vw;
+    align-items: center;
+    justify-content: center;
 }

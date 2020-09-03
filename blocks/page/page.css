@@ -1,5 +1,12 @@
 .page {
     background: #000000;
-    margin: 0 auto;
     width: 100vw;
+    margin: 0;
+}
+
+@media screen and (min-width: 1280px) {
+    .page {
+        max-width: 882px;
+        margin: 0 199px;
+    }
 }

@@ -5,21 +5,9 @@
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-@media screen and (min-width: 769px) {
-    .header {
-        width: 90vw;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .header {
-        width: 80vw;
-    }
-}
-
 @media screen and (min-width: 1280px) {
     .header {
-        width: 69vw;
+        max-width: 882px;
         margin: 45px auto 40px;
     }
 }
