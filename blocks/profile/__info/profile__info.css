@@ -5,12 +5,13 @@
     align-items: baseline;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 @media screen and (min-width: 1280px) {
     .profile__info {
         max-width: 336px;
         margin: 0 246px 0 0;
+        justify-content: space-between;
     }
 }
