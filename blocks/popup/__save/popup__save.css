@@ -6,11 +6,16 @@
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
-    margin: 19px 36px 37px;
+    margin: 19px auto 37px;
     border: none;
     background: #000000;
     display: block;
     width: 83%;
     height: 58px;
     border-radius: 2px;
+}
+
+.popup__save:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

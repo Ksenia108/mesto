@@ -5,7 +5,7 @@
     font-size: 24px;
     line-height: 29px;
     color: #000000;
-    margin: 34px 64px 38px 36px;
+    margin: 34px auto 38px;
     border: none;
-    max-width: 358px;
+    width: 83%;
 }
