@@ -20,56 +20,15 @@
             <img class="profile__image" src="images/kusto.jpg" alt="фото профиля">
             <div class="profile__info">
                 <h1 class="profile__title">Жак-Ив Кусто</h1>
-                <button class="profile__edit button" name="profile-edit" type="button"></button>
+                <button class="profile__edit button" name="profileEdit" type="button"></button>
                 <p class="profile__text">Исследователь океана</p>
 
             </div>
 
-            <button class="profile__add button" type="button"></button>
+            <button class="profile__add button" name="addCard" type="button"></button>
         </section>
         <section class="elements">
-            <div class="element">
-                <img class="element__image" src="./images/stanislav-kondratiev-WUN3dPmO9ZU-unsplash.jpg" alt="мезмай">
-                <div class="element__caption">
-                    <h2 class="element__text">Мезмай</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__image" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="домбай">
-                <div class="element__caption">
-                    <h2 class="element__text">Домбай</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__image" src="./images/nikolay-vorobyev-Lzv2w6wXbSw-unsplash.jpg" alt="куршская коса">
-                <div class="element__caption">
-                    <h2 class="element__text">Куршская коса</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__image" src="./images/roman-manukyan-pD4E5J1fSO4-unsplash.jpg" alt="озеро сукко">
-                <div class="element__caption">
-                    <h2 class="element__text">Озеро Сукко</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__image" src="./images/roman-manukyan-iij8uwOpN1s-unsplash.jpg" alt="байкал">
-                <div class="element__caption">
-                    <h2 class="element__text">Байкал</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
-            <div class="element">
-                <img class="element__image" src="./images/roman-manukyan-7jjSSVoDy-M-unsplash.jpg" alt="архыз">
-                <div class="element__caption">
-                    <h2 class="element__text">Архыз</h2>
-                    <button class="element__like reset button" type="button"></button>
-                </div>
-            </div>
+            <!--загрузка карт через JS-->
         </section>
     </main>
     <footer class="footer">
@@ -77,15 +36,38 @@
     </footer>
     <div class="popup">
 
-        <form class="popup__container" name="popup-form">
+        <form class="popup__container" name="popupForm">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__text" type="text" name="name-input">
-            <input class="popup__text" type="text" name="job-input">
+            <input class="popup__text nameinput" type="text" name="nameInput">
+            <input class="popup__text jobinput" type="text" name="jobInput">
             <input class="popup__save" type="submit" value="Сохранить">
-            <button type="button" class="popup__close reset button" name="profile-close" aria-label="Закрыть Окно"></button>
+            <button type="button" class="popup__close reset button" name="profileClose" aria-label="Закрыть Окно"></button>
         </form>
 
     </div>
+    <div class="popup addCard">
+
+        <form class="popup__container" name="cardForm">
+            <h2 class="popup__title">Новое место</h2>
+            <input class="popup__text" type="text" name="nameMesto" placeholder="Название">
+            <input class="popup__text" type="text" name="imageMesto" placeholder="Ссылка на картинку">
+            <input class="popup__save" type="submit" value="Сохранить">
+            <button type="button" class="popup__close reset button" name="profileClose" aria-label="Закрыть Окно"></button>
+        </form>
+
+    </div>
+
+    <template class="element-template">
+        <div class="element">
+            <img class="element__image" src="img.jpg" alt="фото места">
+            <button type="button" class="element__delete reset button" name="elementDelete" aria-label="Удалить"></button>
+            <div class="element__caption">
+                <h2 class="element__text">Мезмай</h2>
+                <button class="element__like reset button" type="button"></button>
+            </div>
+        </div>
+    </template>
+
     <script src="./pages/script.js"></script>
 </body>
 
