@@ -1,16 +1,22 @@
-let userName = document.querySelector('.profile__title');
-let userJob = document.querySelector('.profile__text')
-let nameInput = document.querySelector('.nameinput');
-let jobInput = document.querySelector('.jobinput');
-let popup = document.querySelector('.popup');
-let forms = document.forms;
-//let popups = document.querySelectorAll('.profile');
-let popupForm = document.querySelector('.popup__container');
-// open popup functionality
-let editButton = document.querySelector('.profile__edit');
-// close popup functionality
-let closePopup = document.querySelector('.profile__close');
+const userName = document.querySelector('.profile__title');
+const userJob = document.querySelector('.profile__text')
+const nameInput = document.querySelector('.nameinput');
+const jobInput = document.querySelector('.jobinput');
+// popupadd
+const nameMesto = document.querySelector('.namemesto');
+const imageMesto = document.querySelector('.imagemesto');
 
+const popup = document.querySelector('.popup');
+const forms = document.forms;
+const popupEdit = document.querySelector('.popup_edit');
+const popupAdd = document.querySelector('.popup_addCard');
+//const popups = document.querySelectorAll('.profile');
+const popupForm = document.querySelector('.popup__container');
+// open popup functionality
+const editButton = document.querySelector('.profile__edit');
+// close popup functionality
+const closePopup = document.querySelector('.popup__close');
+// объявляем перменную для добавления карточек на страницу при загрузке;
 const initialCards = [{
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -36,7 +42,7 @@ const initialCards = [{
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
 ];
-// объявляем перменную для добавления карточек на страницу при загрузке;
+
 //объявляем переменную для template
 const elementTemplate = document.querySelector('.element-template').content;
 //объявляем переменную куда буду вставлять template
@@ -50,33 +56,60 @@ function setInfo() {
 }
 
 function togglePopup() {
-    popup.classList.toggle("popup_opened");
-    if (popup.classList.contains("popup_opened")) {
+    popup.classList.toggle('popup_opened');
+    if (popup.classList.contains('popup_opened')) {
         setInfo();
     }
 }
 
-function formSubmitHandler(evt) {
+function formSubmitHandler(form) {
     evt.preventDefault();
 
-    userName.textContent = nameInput.value;
-    userJob.textContent = jobInput.value;
+    if (form === 'popup_edit') {
+        userName.textContent = nameInput.value;
+        userJob.textContent = jobInput.value;
+    } else if (form === 'popup_add') {
+
+    }
 
     togglePopup();
 }
 
-function add_card(name, link) {
+
+function deleteCard(name) {
+    const i = 0;
+    for (i = 0; i < initialCards.length; i++) {
+        if (initialCards[i]['name'] === name) {
+            const card = document.querySelector(`#card${i}`);
+            card.style.display = 'none';
+        }
+    }
+}
+
+function addCard(name, link, mod) {
+    if (this.count === undefined) {
+        this.count = 0;
+    } else {
+        this.count += 1;
+    }
     const card = elementTemplate.cloneNode(true);
+    const div = card.querySelector('.element');
     const img = card.querySelector('.element__image');
     const text = card.querySelector('.element__text');
+    const deleteButton = card.querySelector('.element__delete');
+    deleteButton.addEventListener('click', function() { deleteCard(name); }, false);
+    div.id = 'card' + this.count;
     img.src = link;
     img.alt = name;
     text.textContent = name;
     elementSection.append(card);
+    if (mod === 'new') {
+        initialCards.push({ name: name, link: link });
+    }
 }
 
 // инициализируем карточ по умолчанию
-initialCards.forEach(card => add_card(card.name, card.link));
+initialCards.forEach(card => addCard(card.name, card.link, "initial"));
 
 //popup profile end
 //function init_form (item, index) {
@@ -87,7 +120,7 @@ initialCards.forEach(card => add_card(card.name, card.link));
 //}
 
 //function init_elements () {
-//   let x = document.createElement('div')
+//   const x = document.createElement('div')
 
 //}
 
@@ -96,5 +129,5 @@ initialCards.forEach(card => add_card(card.name, card.link));
 
 editButton.addEventListener('click', togglePopup);
 closePopup.addEventListener('click', togglePopup);
-popupForm.addEventListener('submit', formSubmitHandler);
-popupForm2.addEventListener('submit', formSubmitHandler);
+popupForm.addEventListener('submit', function() { formSubmitHandler('popup_edit') });
+popupForm.addEventListener('submit', function() { formSubmitHandler('popup_add') });
