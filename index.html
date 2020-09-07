@@ -41,7 +41,7 @@
             <input class="popup__text name-input" type="text" name="nameInput">
             <input class="popup__text job-input" type="text" name="jobInput">
             <input class="popup__save popup__input_submit-save" name="profileSubmitButton" type="submit" value="Сохранить">
-            <button type="button" class="popup__close reset button popup__input_type_card-close" name="profileClose" aria-label="Закрыть Окно"></button>
+            <button type="button" class="popup__close reset button popup__input_btn_card-close" name="profileClose" aria-label="Закрыть Окно"></button>
         </form>
 
     </div>
@@ -53,7 +53,7 @@
             <input class="popup__text popup__input_text_name-mesto" type="text" name="nameMesto" placeholder="Название">
             <input class="popup__text popup__input_text_image-mesto" type="text" name="imageMesto" placeholder="Ссылка на картинку">
             <input class="popup__save popup__input_submit-create" name="cardSubmitButton" type="submit" value="Создать">
-            <button type="button" class="popup__close reset button popup__input_type_card-close" id="cardCloseButton" name="cardClose" aria-label="Закрыть Окно"></button>
+            <button type="button" class="popup__close reset button popup__input_btn_card-close" id="cardCloseButton" name="cardClose" aria-label="Закрыть Окно"></button>
         </form>
 
     </div>
@@ -61,7 +61,7 @@
     <div class="elementpopup">
         <div class="elementpopup__container">
             <img class="elementpopup__image" src="#" alt="">
-            <button type="button" class="elementpopup__close reset button popup__input_type_card-close" name="imageClose" aria-label="Закрыть Окно"></button>
+            <button type="button" class="elementpopup__close reset button popup__input_btn_card-close" name="imageClose" aria-label="Закрыть Окно"></button>
             <p class="elementpopup__text"></p>
         </div>
     </div>
@@ -69,10 +69,10 @@
     <template class="element-template">
         <div class="element">
             <img class="element__image" src="img.jpg" alt="фото места">
-            <button type="button" class="element__delete reset button" name="elementDelete" aria-label="Удалить"></button>
+            <button type="button" class="element__delete reset button popup__input_btn_element-delete" name="elementDelete" aria-label="Удалить"></button>
             <div class="element__caption">
                 <h2 class="element__text">Мезмай</h2>
-                <button class="element__like reset button" type="button"></button>
+                <button class="element__like reset button popup__input_btn_element-like" type="button"></button>
             </div>
         </div>
     </template>
