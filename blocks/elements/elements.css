@@ -4,15 +4,24 @@
     grid-template-columns: 282px;
     grid-template-rows: 361px;
     grid-gap: 20px;
-    max-width: 282px;
+    width: 282px;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 768px) {
+    .elements {
+        grid-template-columns: repeat(2, 282px);
+        grid-template-rows: repeat(3, 361px);
+        row-gap: 21px;
+        column-gap: 15px;
+        width: 75vw;
+    }
+}
+
+@media screen and (min-width: 999px) {
     .elements {
         grid-template-columns: repeat(3, 282px);
         grid-template-rows: repeat(2, 361px);
-        row-gap: 21px;
         column-gap: 18px;
-        max-width: 882px;
+        width: 882px;
     }
 }

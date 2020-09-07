@@ -1,10 +1,11 @@
 .elementpopup__close {
     background-image: url('../../../images/Close\ Icon.svg');
     position: absolute;
-    right: 110px;
-    top: 78px;
+    right: -45px;
+    top: -45px;
     width: 47px;
     height: 47px;
     z-index: 10;
     background-size: cover;
+    padding: 0;
 }

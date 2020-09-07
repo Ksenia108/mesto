@@ -1,6 +1,20 @@
 .elementpopup__container {
     display: flex;
     flex-direction: column;
-    width: 75vw;
-    height: 75vh;
+    position: relative;
+    width: 240px;
+    height: 299px;
+}
+
+@media screen and (min-width: 768px) {
+    .elementpopup__container {
+        width: 360px;
+        height: 420px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .elementpopup__container {
+        width: 816px;
+    }
 }
