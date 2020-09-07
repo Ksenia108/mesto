@@ -16,5 +16,6 @@
 @media screen and (min-width: 1024px) {
     .elementpopup__container {
         width: 816px;
+        height: 540px;
     }
 }
