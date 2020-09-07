@@ -6,7 +6,7 @@ const jobInput = document.querySelector('.jobinput');
 const nameMesto = document.querySelector('.namemesto');
 const imageMesto = document.querySelector('.imagemesto');
 
-const forms = document.forms;
+//const forms = document.forms;
 
 const popupEdit = document.querySelector('.popup_edit');
 
@@ -75,9 +75,6 @@ function togglePopup(form) {
         }
     } else if (form === 'popup_add') {
         popupAdd.classList.toggle('popup_opened');
-        if (popupAdd.classList.contains('popup_opened')) {
-            addCard(nameMesto.value, imageMesto.value, 'new');
-        }
     }
 }
 
@@ -87,8 +84,11 @@ function formSubmitHandler(evt, form) {
     if (form === 'popup_edit') {
         userName.textContent = nameInput.value;
         userJob.textContent = jobInput.value;
+        console.log("debug profile form edit values=", nameInput.value, jobInput.value);
         togglePopup(form);
     } else if (form === 'popup_add') {
+        addCard(nameMesto.value, imageMesto.value, 'new');
+        console.log("debug card form add values=", nameMesto.value, imageMesto.value);
         togglePopup(form);
     }
 
@@ -112,6 +112,7 @@ function addCard(name, link, mod) {
     } else {
         this.count += 1;
     }
+    console.log("debug addCard name=", name, link, mod);
     const card = elementTemplate.cloneNode(true);
     const div = card.querySelector('.element');
     const img = card.querySelector('.element__image');
