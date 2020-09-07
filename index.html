@@ -34,9 +34,9 @@
     <footer class="footer">
         <p class="footer__text">&copy; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup popup_edit">
+    <div class="popup popup_edit transition">
 
-        <form class="popup__container" name="popupForm">
+        <form class="popup__container profileform" name="popupForm">
             <h2 class="popup__title">Редактировать профиль</h2>
             <input class="popup__text nameinput" type="text" name="nameInput">
             <input class="popup__text jobinput" type="text" name="jobInput">
@@ -45,16 +45,25 @@
         </form>
 
     </div>
-    <div class="popup popup_addCard">
 
-        <form class="popup__container" name="cardForm">
+    <div class="popup popup_addcard transition">
+
+        <form class="popup__container cardform" name="cardForm">
             <h2 class="popup__title">Новое место</h2>
             <input class="popup__text namemesto" type="text" name="nameMesto" placeholder="Название">
             <input class="popup__text imagemesto" type="text" name="imageMesto" placeholder="Ссылка на картинку">
             <input class="popup__save" type="submit" value="Создать">
-            <button type="button" class="popup__close reset button" name="profileClose" aria-label="Закрыть Окно"></button>
+            <button type="button" class="popup__close reset button" id="cardCloseButton" name="profileClose" aria-label="Закрыть Окно"></button>
         </form>
 
+    </div>
+
+    <div class="elementpopup transition">
+        <div class="elementpopup__container">
+            <img class="elementpopup__image" src="#" alt="">
+            <button type="button" class="elementpopup__close reset button" name="imageClose" aria-label="Закрыть Окно"></button>
+            <p class="elementpopup__text"></p>
+        </div>
     </div>
 
     <template class="element-template">

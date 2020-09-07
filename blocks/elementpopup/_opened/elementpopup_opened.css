@@ -1,0 +1,7 @@
+.elementpopup_opened {
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+}
