@@ -45,19 +45,16 @@ function profileFormSubmitHandler(evt) {
     evt.preventDefault();
     userName.textContent = nameInput.value;
     userJob.textContent = jobInput.value;
-    console.log("debug profile form edit values=", nameInput.value, jobInput.value);
     togglePopup(popupEditProfile);
 }
 
 function cardFormSubmitHandler(evt) {
     evt.preventDefault();
     addCard(nameMesto.value, imageMesto.value, 'new');
-    console.log("debug card form add values=", nameMesto.value, imageMesto.value);
     togglePopup(popupAddCard);
 }
 
 function addCard(name, link, mode) {
-    console.log("debug addCard name=", name, link);
     const card = elementTemplate.cloneNode(true);
     const element = card.querySelector('.element');
     const elementImg = card.querySelector('.element__image');
