@@ -6,7 +6,7 @@
     line-height: 56px;
     color: #FFFFFF;
     margin: 0;
-    min-width: 201px;
+    width: 201px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -15,6 +15,6 @@
 @media screen and (min-width: 999px) {
     .profile__title {
         font-size: 42px;
-        max-width: 295px;
+        width: 295px;
     }
 }

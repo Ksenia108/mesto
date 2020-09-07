@@ -1,6 +1,6 @@
 .profile__info {
     margin: 10px auto 36px;
-    max-width: 280px;
+    width: 280px;
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -10,7 +10,7 @@
 
 @media screen and (min-width: 999px) {
     .profile__info {
-        max-width: 336px;
+        width: 336px;
         margin: 0 246px 0 0;
         justify-content: space-between;
     }
