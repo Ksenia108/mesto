@@ -5,9 +5,6 @@
     font-size: 14px;
     display: flex;
     color: #FFFFFF;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow-y: hidden;
     width: 280px;
     justify-content: center;
     margin: 0;
