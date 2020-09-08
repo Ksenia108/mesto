@@ -3,6 +3,7 @@
 @import url('./__save/popup__save.css');
 @import url('./__text/popup__text.css');
 @import url('./__title/popup__title.css');
+@import url('./_photo/popup_photo.css');
 .popup {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;

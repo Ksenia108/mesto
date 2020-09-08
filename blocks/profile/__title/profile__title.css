@@ -3,13 +3,12 @@
     font-style: normal;
     font-weight: 500;
     font-size: 27px;
-    line-height: 56px;
     color: #FFFFFF;
     margin: 0;
     width: 201px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 @media screen and (min-width: 999px) {

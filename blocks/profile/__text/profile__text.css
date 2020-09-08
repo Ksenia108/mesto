@@ -3,21 +3,19 @@
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 17px;
     display: flex;
     color: #FFFFFF;
-    margin: 14px 0 0;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     width: 280px;
     justify-content: center;
+    margin: 0;
 }
 
 @media screen and (min-width: 999px) {
     .profile__text {
         font-size: 18px;
-        margin: 16px 0 0;
         width: 318px;
         justify-content: start;
     }

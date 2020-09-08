@@ -1,17 +1,17 @@
-.elementpopup__image {
+.popup_photo__image {
     width: 240px;
     height: 299px;
 }
 
 @media screen and (min-width: 768px) {
-    .elementpopup__image {
+    .popup_photo__image {
         width: 360px;
         height: 420px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .elementpopup__image {
+    .popup_photo__image {
         width: 816px;
         height: 540px;
     }

@@ -10,6 +10,7 @@
     background-color: transparent;
     margin: 0;
     padding: 0;
+    justify-content: end;
 }
 
 @media screen and (min-width: 999px) {

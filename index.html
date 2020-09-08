@@ -37,8 +37,8 @@
 
         <form class="popup__container profile-form" name="popupForm">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input class="popup__text popup__input_text_profile-person" type="text" name="personInput">
-            <input class="popup__text popup__input_text_profile-job" type="text" name="jobInput">
+            <input class="popup__text popup__input_text_profile-person" type="text" name="personInput" placeholder="Жак-Ив Кусто">
+            <input class="popup__text popup__input_text_profile-job" type="text" name="jobInput" placeholder="Исследователь">
             <input class="popup__save popup__input_submit_profile-save" name="profileSubmitButton" type="submit" value="Сохранить">
             <button type="button" class="popup__close reset button popup__input_btn_profile-close" name="profileClose" aria-label="Закрыть Окно"></button>
         </form>
@@ -57,11 +57,11 @@
 
     </div>
 
-    <div class="elementpopup">
-        <div class="elementpopup__container">
-            <img class="elementpopup__image" src="#" alt="">
-            <button type="button" class="elementpopup__close reset button" name="imageClose" aria-label="Закрыть Окно"></button>
-            <p class="elementpopup__text"></p>
+    <div class="popup_photo">
+        <div class="popup_photo__container">
+            <img class="popup_photo__image" src="#" alt="">
+            <button type="button" class="popup__close reset button popup__input_btn_photo-close" name="imageClose" aria-label="Закрыть Окно"></button>
+            <p class="popup_photo__text"></p>
         </div>
     </div>
 
@@ -75,8 +75,8 @@
             </div>
         </div>
     </template>
-    <script src="./script/initial/initial-cards.js"></script>
-    <script src="./pages/index.js"></script>
+    <script src="./scripts/initial-cards.js"></script>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
