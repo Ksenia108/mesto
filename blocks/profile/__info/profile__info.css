@@ -3,8 +3,10 @@
     width: 280px;
     display: grid;
     grid-template-columns: 201px 18px;
-    row-gap: 16px;
+    row-gap: 14px;
     grid-template-rows: 38px 14px;
+    justify-content: space-between;
+    align-items: end;
 }
 
 @media screen and (min-width: 999px) {
@@ -13,6 +15,6 @@
         margin: 0 246px 0 0;
         grid-template-columns: 295px 24px;
         grid-template-rows: 43px 18px;
-        row-gap: 18px;
+        row-gap: 16px;
     }
 }

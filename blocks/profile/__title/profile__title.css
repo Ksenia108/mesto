@@ -8,7 +8,7 @@
     width: 201px;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 999px) {

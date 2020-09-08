@@ -7,7 +7,7 @@
     color: #FFFFFF;
     text-overflow: ellipsis;
     white-space: nowrap;
-    overflow: hidden;
+    overflow-y: hidden;
     width: 280px;
     justify-content: center;
     margin: 0;
