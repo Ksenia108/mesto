@@ -25,12 +25,6 @@ const elementPopupClose = document.querySelector('.popup__input_btn_photo-close'
 const elementTemplate = document.querySelector('.element-template').content;
 const elementSection = document.querySelector('.elements');
 
-//overlay close 
-const popupOverlayList = document.querySelectorAll('.popup');
-const popupContainerList = document.querySelectorAll('.popup__container');
-const popupCloseBtnList = document.querySelectorAll('.popup__close');
-
-
 function setProfileInfo() {
     nameInput.value = userName.textContent;
     jobInput.value = userJob.textContent;
