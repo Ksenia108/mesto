@@ -22,3 +22,7 @@
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
 }
+
+.popup:last-of-type {
+    background-color: rgba(0, 0, 0, 0.9);
+}
