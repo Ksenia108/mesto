@@ -7,7 +7,8 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    z-index: 30;
 }
 
 @media screen and (min-width: 320px) {
