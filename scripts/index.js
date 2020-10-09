@@ -1,3 +1,6 @@
+import { Card } from './card.js';
+import { FormValidator } from './formValidator.js';
+
 const userName = document.querySelector('.profile__title');
 const userJob = document.querySelector('.profile__text');
 const nameInput = document.querySelector('.popup__input_text_profile-person');
@@ -22,8 +25,50 @@ const elementPopupImage = document.querySelector('.popup_photo__image');
 const elementPopupText = document.querySelector('.popup_photo__text');
 const elementPopupClose = document.querySelector('.popup__input_btn_photo-close');
 
-const elementTemplate = document.querySelector('.element-template').content;
+const elementTemplate = '.element-template';
 const elementSection = document.querySelector('.elements');
+
+const initialCards = [{
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+];
+
+const formSelector = '.profile-form';
+const formSelector2 = '.card-form'
+const inputSelector = '.popup__input';
+const submitButtonSelector = '.popup__save';
+const inactiveButtonClass = 'popup__save_disabled';
+const inputErrorClass = 'popup__input_type_error';
+const errorClass = 'popup__error_visible';
+
+const args = {
+    inputSelector: inputSelector,
+    submitButtonSelector: submitButtonSelector,
+    inactiveButtonClass: inactiveButtonClass,
+    inputErrorClass: inputErrorClass,
+    errorClass: errorClass
+};
 
 function setProfileInfo() {
     nameInput.value = userName.textContent;
@@ -35,25 +80,11 @@ function togglePopup(popup) {
 }
 
 function createCard(name, link) {
-    const card = elementTemplate.cloneNode(true);
-    const element = card.querySelector('.element');
-    const elementImg = card.querySelector('.element__image');
-    const elementText = card.querySelector('.element__text');
-    const deleteButton = card.querySelector('.element__delete');
-    const likeButton = card.querySelector('.element__like');
-
-    deleteButton.addEventListener('click', function() { element.remove(); });
-    likeButton.addEventListener('click', function() { likeButton.classList.toggle('element__like_active'); });
-    elementImg.src = link;
-    elementImg.alt = name;
-    elementImg.addEventListener('click', function() {
-        openPopup(elementPopup);
-        elementPopupImage.src = link;
-        elementPopupImage.alt = name;
-        elementPopupText.textContent = name;
-    });
-    elementText.textContent = name;
-    return card;
+    const card = new Card(link, name, elementTemplate);
+    const cardElement = card.generateCard();
+    const elementImg = cardElement.querySelector('.element__image');
+    elementImg.addEventListener('click', function() { photoPopup(name, link); });
+    return cardElement;
 }
 
 function addInitCard(name, link) {
@@ -107,11 +138,8 @@ function preventBubbling(event) {
 function openPopup(popup) {
     const popupContainer = popup.querySelector('.popup__form');
     togglePopup(popup);
-    // prevent bubbling
     popupContainer.addEventListener('click', preventBubbling);
-    // overlay click close
     popup.addEventListener('click', closePopup);
-    // escape
     document.addEventListener('keydown', closePopupOnEsc);
 }
 
@@ -120,9 +148,15 @@ function handleEditProfile() {
     setProfileInfo();
 }
 
+function photoPopup(name, link) {
+    openPopup(elementPopup);
+    elementPopupImage.src = link;
+    elementPopupImage.alt = name;
+    elementPopupText.textContent = name;
+}
+
 
 initCards(initialCards);
-
 
 elementPopupClose.addEventListener('click', closePopup);
 
@@ -136,3 +170,6 @@ cardClosePopupButton.addEventListener('click', closePopup);
 profileForm.addEventListener('submit', profileFormSubmitHandler);
 
 cardForm.addEventListener('submit', cardFormSubmitHandler);
+
+new FormValidator(args, formSelector).enableValidation();
+new FormValidator(args, formSelector2).enableValidation();
