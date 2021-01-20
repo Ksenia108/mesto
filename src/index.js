@@ -6,9 +6,9 @@ import { Section } from '../components/section.js';
 import { PopupWithForm } from '../scripts/popupWithForm.js';
 import { UserInfo } from '../components/userInfo.js';
 
-const profileOpenPopupButton = document.querySelector('.popup__profile-open-button');
+const profileOpenPopupButton = document.querySelector('.profile__edit');
 
-const cardOpenPopupButton = document.querySelector('.popup__add-card-open-button');
+const cardOpenPopupButton = document.querySelector('.profile__add');
 
 const elementTemplate = '.element-template';
 const elementSection = '.elements';

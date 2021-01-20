@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--<link rel="stylesheet" href="../pages/index.css">-->
-
     <title>Места России</title>
 </head>
 
@@ -21,11 +18,11 @@
             <img class="profile__image" src="<%=require('../images/kusto.jpg')%>" alt="фото профиля">
             <div class="profile__info">
                 <h1 class="profile__title ellipsis">Жак-Ив Кусто</h1>
-                <button class="profile__edit button popup__profile-open-button" name="profileEdit" type="button"></button>
+                <button class="profile__edit button" name="profileEdit" type="button"></button>
                 <p class="profile__text ellipsis">Исследователь океана</p>
             </div>
 
-            <button class="profile__add button popup__add-card-open-button" name="addCard" type="button"></button>
+            <button class="profile__add button" name="addCard" type="button"></button>
         </section>
         <section class="elements">
             <!--загрузка карт через JS-->
@@ -38,11 +35,11 @@
         <form class="popup__container profile-form popup__form" name="popupForm" validate>
             <h2 class="popup__title">Редактировать профиль</h2>
             <input class="popup__text popup__input popup__input_text_profile-person" type="text" name="personInput" id="person-input" placeholder="Имя" required minlength="2" maxlength="40" autofocus>
-            <span class="popup__input_error" id="person-input-error"></span>
+            <span class="popup__error" id="person-input-error"></span>
             <input class="popup__text popup__input popup__input_text_profile-job" type="text" name="jobInput" id="job-input" placeholder="Вид деятельности" required minlength="2" maxlength="200">
-            <span class="popup__input_error" id="job-input-error"></span>
-            <button class="popup__save popup__input_submit_profile-save" name="profileSubmitButton" type="submit" value="Сохранить">Сохранить</button>
-            <button type="button" class="popup__close reset button popup__input_btn_profile-close" name="profileClose" aria-label="Закрыть Окно"></button>
+            <span class="popup__error" id="job-input-error"></span>
+            <button class="popup__save" name="profileSubmitButton" type="submit" value="Сохранить">Сохранить</button>
+            <button type="button" class="popup__close reset button" name="profileClose" aria-label="Закрыть Окно"></button>
         </form>
 
     </div>
@@ -51,19 +48,19 @@
         <form class="popup__container popup__form card-form" name="cardForm" validate>
             <h2 class="popup__title">Новое место</h2>
             <input class="popup__text popup__input popup__input_text_card-name" type="text" id="place-name-input" name="placeName" placeholder="Название" value="" required minlength="2" maxlength="30" autofocus>
-            <span class="popup__input_error" id="place-name-input-error"></span>
+            <span class="popup__error" id="place-name-input-error"></span>
             <input class="popup__text popup__input popup__input_text_card-image" type="url" id="place-image-input" name="placeImage" placeholder="Ссылка на картинку" value="" required>
-            <span class="popup__input_error" id="place-image-input-error"></span>
-            <button class="popup__save popup__input_submit_card-create" name="cardSubmitButton" type="submit" value="Создать">Создать</button>
-            <button type="button" class="popup__close reset button popup__input_btn_card-close" name="cardClose" aria-label="Закрыть Окно"></button>
+            <span class="popup__error" id="place-image-input-error"></span>
+            <button class="popup__save" name="cardSubmitButton" type="submit" value="Создать">Создать</button>
+            <button type="button" class="popup__close reset button" name="cardClose" aria-label="Закрыть Окно"></button>
         </form>
 
     </div>
     <div class="popup popup_photo">
-        <div class="popup_photo__container popup__form">
-            <img class="popup_photo__image" src="#" alt="">
-            <button type="button" class="popup__close reset button popup__input_btn_photo-close" name="imageClose" aria-label="Закрыть Окно"></button>
-            <p class="popup_photo__text"></p>
+        <div class="photo__container popup__form">
+            <img class="photo__image" src="#" alt="">
+            <button type="button" class="popup__close reset button" name="imageClose" aria-label="Закрыть Окно"></button>
+            <p class="photo__text"></p>
         </div>
     </div>
 
@@ -77,7 +74,6 @@
             </div>
         </div>
     </template>
-    <!--script type="module" src="./index.js"></script>-->
 </body>
 
 </html>

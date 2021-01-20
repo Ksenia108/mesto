@@ -1,4 +1,4 @@
-.popup_photo__container {
+.photo__container {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -7,14 +7,14 @@
 }
 
 @media screen and (min-width: 768px) {
-    .popup_photo__container {
+    .photo__container {
         width: 360px;
         height: 420px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .popup_photo__container {
+    .photo__container {
         width: 816px;
         height: 540px;
     }
