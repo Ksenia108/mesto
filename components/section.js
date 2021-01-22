@@ -6,12 +6,13 @@ export class Section {
     }
 
     render() {
+        this._items.reverse();
         this._items.forEach(item => this.renderer(item));
     }
 
 
     addItem(data) {
-        this._container.append(data);
+        this._container.prepend(data);
     }
 
 }

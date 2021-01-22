@@ -5,7 +5,7 @@ export class UserInfo {
     }
 
     getUserInfo() {
-        return { userJob: this._userJob, userName: this._userName };
+        return { userJob: this._userJob.textContent, userName: this._userName.textContent };
     }
 
     setUserInfo(items) {

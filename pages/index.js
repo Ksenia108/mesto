@@ -1,9 +1,9 @@
-import '../pages/index.css';
+import './index.css';
 import { Card } from '../components/card.js';
-import { FormValidator } from '../scripts/formValidator.js';
-import { PopupWithImage } from '../scripts/popupWithImage.js';
+import { FormValidator } from '../components/formValidator.js';
+import { PopupWithImage } from '../components/popupWithImage.js';
 import { Section } from '../components/section.js';
-import { PopupWithForm } from '../scripts/popupWithForm.js';
+import { PopupWithForm } from '../components/popupWithForm.js';
 import { UserInfo } from '../components/userInfo.js';
 
 const profileOpenPopupButton = document.querySelector('.profile__edit');
@@ -61,7 +61,6 @@ const validationSettings = {
 
 const handleProfileFormSubmit = (formValues) => {
     popupEditProfile.close();
-    profileInfo.getUserInfo();
     profileInfo.setUserInfo(formValues);
 }
 const handleCardFormSubmit = (formValues) => {
@@ -70,11 +69,11 @@ const handleCardFormSubmit = (formValues) => {
 }
 
 const popupEditProfile = new PopupWithForm(popupSelector, handleProfileFormSubmit);
-profileOpenPopupButton.addEventListener('click', popupEditProfile.open.bind(popupEditProfile)); //добавление обработчика события открытия попапа
+profileOpenPopupButton.addEventListener('click', popupEditProfile.open); //добавление обработчика события открытия попапа
 popupEditProfile.setEventListeners();
 
 const popupAddCard = new PopupWithForm(popupSelector2, handleCardFormSubmit);
-cardOpenPopupButton.addEventListener('click', popupAddCard.open.bind(popupAddCard));
+cardOpenPopupButton.addEventListener('click', popupAddCard.open);
 popupAddCard.setEventListeners();
 
 const profileInfo = new UserInfo({ nameSelector: '.profile__title', jobSelector: '.profile__text' });
