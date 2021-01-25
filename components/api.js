@@ -4,19 +4,21 @@ export class Api {
         this._token = token;
     }
 
+    _checkResponse(res) {
+        if (res.ok) {
+            return res.json();
+        }
+        return Promise.reject(`Ошибка ${res.status}`);
+    }
+
+
     getUserData() {
         return fetch(`${this._baseUrl}/users/me`, {
                 headers: {
                     authorization: this._token
                 }
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
     updateUserInfo(name, about) {
@@ -32,13 +34,7 @@ export class Api {
             })
         })
 
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-
-            }
-            return Promise.reject(`Что-то пошло не так: ${res.status}`);
-        })
+        .then(this._checkResponse)
     }
 
     updateUserAvatar(avatar) {
@@ -52,12 +48,7 @@ export class Api {
                     avatar: avatar
                 })
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
 
     }
 
@@ -67,13 +58,7 @@ export class Api {
                     authorization: this._token
                 }
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
     addCard(name, link) {
@@ -88,13 +73,7 @@ export class Api {
                     link: link
                 })
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
     deleteCard(id) {
@@ -104,13 +83,7 @@ export class Api {
                     authorization: this._token
                 }
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
     addCardLike(id) {
@@ -120,13 +93,7 @@ export class Api {
                     authorization: this._token
                 }
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
     deleteCardLike(id) {
@@ -136,13 +103,7 @@ export class Api {
                     authorization: this._token
                 }
             })
-            .then((res) => {
-                if (res.ok) {
-                    return res.json();
-
-                }
-                return Promise.reject(`Что-то пошло не так: ${res.status}`);
-            })
+            .then(this._checkResponse)
     }
 
 }

@@ -11,8 +11,8 @@ export class Card {
         this._handleLikeClick = handleLikeClick.bind(this);
     }
 
-    remove(id) {
-        document.getElementById(id).parentNode.remove();
+    remove() {
+        this._element.remove();
     }
 
     setLikes(likes) {
@@ -45,6 +45,7 @@ export class Card {
         const _cardElement = document
             .querySelector(this._cardSelector)
             .content
+            .querySelector('.element')
             .cloneNode(true);
 
         return _cardElement;
