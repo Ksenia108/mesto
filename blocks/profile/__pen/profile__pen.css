@@ -1,0 +1,10 @@
+.profile__pen {
+    display: block;
+    background-image: url('../../../images/pen.svg');
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    margin: 47px;
+    background-size: cover;
+    z-index: 2;
+}
