@@ -7,7 +7,7 @@ import { Section } from '../components/Section.js';
 import { PopupWithForm } from '../components/PopupWithForm.js';
 import { UserInfo } from '../components/UserInfo.js';
 import { Api } from '../components/Api.js';
-import { profileOpenPopupButton, cardOpenPopupButton, avatarOpenPopupButton, elementTemplate, elementSection, formSelector, formSelector2, formSelector3, popupSelector, popupSelector2, popupSelector3, popupSelector4, popupSelector5, baseUrl, authToken, validationSettings } from '../utils/constants.js';
+import { profileOpenPopupButton, cardOpenPopupButton, avatarOpenPopupButton, elementTemplate, elementSection, formSelector, formSelector2, formSelector3, popupSelector, popupSelector2, popupSelector3, popupSelector4, popupSelector5, baseUrl, authToken, validationSettings, inputName, inputJob } from '../utils/constants.js';
 let userId = '';
 
 const createCard = (item) => {
@@ -104,6 +104,8 @@ const handleAvatarFormSubmit = (formValues) => {
 const popupEditProfile = new PopupWithForm(popupSelector, handleProfileFormSubmit);
 profileOpenPopupButton.addEventListener('click', () => {
     popupEditProfile.open();
+    inputName.value = profileInfo.getUserInfo().userName;
+    inputJob.value = profileInfo.getUserInfo().userJob;
     profileValidator.resetValidation();
 });
 popupEditProfile.setEventListeners();

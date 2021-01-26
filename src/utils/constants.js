@@ -9,6 +9,8 @@ const formSelector = '.profile-form';
 const formSelector2 = '.card-form';
 const formSelector3 = '.avatar-form';
 const inputSelector = '.popup__input';
+const inputName = document.querySelector('.popup__input_text_profile-person');
+const inputJob = document.querySelector('.popup__input_text_profile-job');
 const submitButtonSelector = '.popup__save';
 const inactiveButtonClass = 'popup__save_disabled';
 const inputErrorClass = 'popup__input_type_error';
@@ -31,4 +33,4 @@ const validationSettings = {
     errorClass: errorClass
 };
 
-export { profileOpenPopupButton, cardOpenPopupButton, avatarOpenPopupButton, elementTemplate, elementSection, formSelector, formSelector2, formSelector3, popupSelector, popupSelector2, popupSelector3, popupSelector4, popupSelector5, baseUrl, authToken, validationSettings };
+export { profileOpenPopupButton, cardOpenPopupButton, avatarOpenPopupButton, elementTemplate, elementSection, formSelector, formSelector2, formSelector3, popupSelector, popupSelector2, popupSelector3, popupSelector4, popupSelector5, baseUrl, authToken, validationSettings, inputName, inputJob };

@@ -7,6 +7,7 @@ export class UserInfo {
 
     getUserInfo() {
         return { userJob: this._userJob.textContent, userName: this._userName.textContent };
+
     }
 
     setUserAvatar(items) {
